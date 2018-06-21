@@ -1,0 +1,89 @@
+<ion-card *ngIf="report.reportType!=='aging';else aging">
+
+<ion-card-header><h2 style="font-weight:normal;white-space:normal" #cardheader>{{report.reportTitle}}</h2></ion-card-header>
+    <ion-card-content text-center>
+      <ion-row class="statistic">
+      <ion-col text-center>
+          <div class="number">
+            <h2>{{report.actValueFrst}}</h2>
+            <ion-note>{{report.currentTimePersion}}</ion-note>
+          </div>
+      </ion-col>
+      <ion-col text-center>
+        <div class="number">
+          <h1 style="background-color:lightgray;padding:2%">{{report.percentage}}</h1>
+          <ion-note>  </ion-note>
+        </div>
+      </ion-col>
+      <ion-col text-center>
+        <div class="number">
+          <h2>{{report.actValueSecnd}}</h2>
+          <ion-note>{{report.comparisionPeriod}}</ion-note>
+        </div>
+      </ion-col>
+    </ion-row>
+    <!-- <ion-row>
+      <ion-col text-center></ion-col>
+    </ion-row> -->
+  </ion-card-content>
+</ion-card>
+
+<ng-template #aging>
+  <ion-card>
+    <ion-card-header><h2 style="font-weight:normal;white-space:normal" #cardheader>{{report.reportTitle}}</h2></ion-card-header>
+    <ion-card-content text-center>
+      <ion-row class="statistic">
+        <ion-col text-center>
+          <div class="number">
+            <h1 style="background-color:lightgray;padding:2%">{{report.actValueSecnd}}</h1>
+            <h5 ion-text color="dark">{{report.percentage}} </h5>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ng-template>
+
+<!--
+<ion-card>
+  <ion-card-content>
+    <div class="statistic">
+
+    <ion-card-title>
+      <h2>Patient Visits</h2>
+    </ion-card-title>
+      <ion-row>
+        <ion-col>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+        <div class="number">
+          <h1>23,000</h1>
+        <ion-note><h4>of 50,000 Visits</h4></ion-note>
+        </div>
+      </ion-col>
+      </ion-row>
+</div>
+<ion-row>
+
+  <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>12 Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>4 Comments</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <ion-note>
+        <ion-badge item-end><ion-icon name="arrown-down"></ion-icon></ion-badge>
+      </ion-note>
+    </ion-col>
+</ion-row>
+  </ion-card-content>
+</ion-card> -->

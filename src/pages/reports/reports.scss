@@ -1,0 +1,135 @@
+.card-background-page {
+
+
+
+  ion-card {
+    position: relative;
+    text-align: center;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+  }
+}
+.nextPrivTab { background: #f7f7f7; border: solid 1px #ccc; }
+.nextPrivTab .row .col:first-child{text-align: left; color: #444;     font-weight: bold !important; font-size: 23px !important;}
+.nextPrivTab .row .col:last-child{text-align: right; color: #444;     font-weight: bold !important; font-size: 23px !important;}
+SCROLL-CONTENT {
+	overflow-y: auto !important;
+}
+.nextPrivTab button{background: none;}
+.slide-zoom{
+  height:100%;
+  overflow-y: auto;
+}
+.scroll-content {
+background: #f3f2f2;
+}
+
+.slide-zoom .toolbar .toolbar-background {
+	/*border-color: #b2b2b2;
+	background: #72808a !important;*/
+	border: #999 solid 1px;
+	background: #eee !important;
+}
+.slide-zoom .toolbar {
+min-height: 36px;
+}
+.slide-zoom .toolbar-title {
+font-weight: normal;
+color: #333;
+}
+ion-navbar .toolbar-background{background:#d7181e;}
+ion-navbar .searchIcon {font-size: 1.6em; font-weight: bold;}
+.toolbar-title{color: #fff; font-weight:normal;}
+.toolbar-title{color: #fff; font-weight:normal;}
+ion-icon.back-button-icon, button.back-button, button.bar-button{color: #fff;}
+ion-icon.back-button-icon:hover, button.back-button:hover, button.bar-button:hover{color: #fff !important; opacity: 0.6;}
+.scroll-content{padding: 3px 10px 6px 3px !important;}
+analytics-card .card {
+margin:3px 0;
+width: 100%;
+}
+analytics-card .card h2, analytics-card .card h5{
+ color: #fff !important;
+}
+
+analytics-card .card .statistic {
+border-radius: 2px;
+padding: 2%;
+}
+analytics-card .card-content{
+padding: 0 13px 16px 13px !important;
+}
+analytics-card .card .statistic .number{
+padding: 0%;
+}
+analytics-card .card .statistic .number h2 {
+font-size: 15px;
+opacity: 0.9;
+}
+analytics-card .card .card-header {
+font-weight: normal;
+padding: 15px 0 10px;
+}
+analytics-card .card ion-note{
+  color:#fff;
+  font-size: 15px;
+  opacity: 0.8;
+}
+analytics-card .card .number h1 {
+background: transparent !important;
+color: #fff;
+font-size: 16px;
+font-weight: bold;
+}
+.customColorCards ion-col .card { background: #ffffff;}
+.customColorCards ion-col .card .statistic { background-color: #f3f3f3; }
+.chartParent{ min-height: 6vh; width: 100%; float: left; }
+.chartParent fusioncharts { float: left; width: 100%;}
+.searchbar .searchbar-input{background-color: #ffffff !important;}
+.customColorCards ion-col:nth-child(1) .card, .customColorCards ion-col:nth-child(7) .card {background: rgba(239, 134, 89, 0.8);}
+.customColorCards ion-col:nth-child(1) .card .statistic, .customColorCards ion-col:nth-child(7) .card .statistic { background-color: rgba(219, 116, 71, 0.6);}
+
+.customColorCards ion-col:nth-child(2) .card, .customColorCards ion-col:nth-child(8) .card {background: rgba(115, 186, 93, 1);}
+.customColorCards ion-col:nth-child(2) .card .statistic, .customColorCards ion-col:nth-child(8) .card .statistic { background-color: rgba(98, 167, 76, 0.8);}
+
+.customColorCards ion-col:nth-child(3) .card, .customColorCards ion-col:nth-child(9) .card {background: rgba(93, 159, 162, 1);}
+.customColorCards ion-col:nth-child(3) .card .statistic, .customColorCards ion-col:nth-child(9) .card .statistic { background-color: rgba(81, 146, 149, 1);}
+
+.customColorCards ion-col:nth-child(4) .card, .customColorCards ion-col:nth-child(10) .card{background: rgba(70, 116, 157, 0.95);}
+.customColorCards ion-col:nth-child(4) .card .statistic, .customColorCards ion-col:nth-child(10) .card .statistic { background-color: rgba(60, 105, 145, 0.7);}
+
+.customColorCards ion-col:nth-child(5) .card, .customColorCards ion-col:nth-child(11) .card {background: rgba(52, 173, 168, 1);}
+.customColorCards ion-col:nth-child(5) .card .statistic, .customColorCards ion-col:nth-child(11) .card .statistic { background-color: rgba(38, 155, 150, 0.8);}
+
+.customColorCards ion-col:nth-child(6) .card, .customColorCards ion-col:nth-child(12) .card {background: rgba(88, 96, 115, 0.8);}
+.customColorCards ion-col:nth-child(6) .card .statistic, .customColorCards ion-col:nth-child(12) .card .statistic { background-color: rgba(78, 86, 103, 0.4);}
+
+/**cancel search***/
+.cu-serch{
+  // .searchbar-input-container{
+  //   width:100%;
+  // }
+  // .searchbar-ios-cancel{
+  //   display: block;
+  // }
+  // .button-clear-ios {
+  //   border-color: transparent;
+  //   color: #fff;
+  //   background-color: #488aff;
+  // }
+}

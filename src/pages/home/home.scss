@@ -1,0 +1,72 @@
+page-home {
+	// ion-header .toolbar-background{background:#5a544d;}
+	// ion-buttons .bar-button{color : #fff;}
+	// ion-header .bar-button:hover{color: #fff !important; opacity: 0.6;}
+	// ion-title {padding: 0 10px 1px !important;}
+	// ion-title .toolbar-title{text-align:left;}
+	ion-header .toolbar-background{background:#d7181e;}
+	ion-buttons .bar-button{color : #fff;}
+	ion-header .bar-button:hover{color: #fff !important; opacity: 0.6;}
+	ion-title {padding: 0 10px 1px !important;}
+	ion-title .toolbar-title{text-align:left;}
+	.header-ios ion-title .toolbar-title-ios { margin-top: 20px;}
+
+  .grid{
+	width: 49.5%;
+	float: left;
+	display: block;
+	padding: 1px !important;
+  }
+  .scroll-content{
+	padding: 5px !important;
+  }
+  .square {
+    width: 100% !important;
+    height:0 !important;
+    padding: 0 0 100% 0 !important;
+  }
+  .square h3{
+    position: fixed;
+    margin-top:50%;
+  }
+
+	.divButton {
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+    padding: 2vh 0;
+    width: 100%;
+    height:auto !important;
+	background: #f64d4d none repeat scroll 0 0;
+	text-align: center;
+  }
+	.divButton:hover { opacity: 0.8;}
+  .buttonContainer .divButton:first-child {
+    background: #67aeb2 none repeat scroll 0 0;
+  }
+  .buttonContainer .divButton:nth-child(2) {
+    background: #67aeb2 none repeat scroll 0 0;
+  }
+  .buttonContainer .divButton:nth-child(3) {
+    background: #72808a none repeat scroll 0 0;
+  }
+  ion-icon.icon{
+	display: block;
+	font-size: 2.5em;
+  }
+ span.btnTitle {font-size: 17px;
+padding: 10px 0 5px;
+display: block;
+	}
+	.grid:nth-child(2) .divButton {
+background: #5da4a8 none repeat scroll 0 0;
+}
+.grid:nth-child(3) .divButton {
+background: #72808a none repeat scroll 0 0;
+}
+
+}
+.menu-inner ion-title.title{padding: 0 10px 1px !important; }
+.menu-inner button.item{color: #fff; background-color: #67afb2;}
+.menu-inner button.subMenu{background: #5a544d;}

@@ -1,0 +1,22 @@
+<ion-content class="login-content" padding>
+  <div class="loginBox">
+		<div class="loginLogo">
+			<img src="./assets/logo.png" />
+		</div>
+		<div class="loginForm">
+			<form (ngSubmit)="login(loginForm)" #loginForm="ngForm">
+				<h4>Login</h4>
+				<div class="formRow">
+					<ion-input type="text" placeholder="Email" name="Username" ngModel required></ion-input>
+				</div>
+				<div class="formRow">
+					<ion-input type="password" placeholder="Password" name="password" ngModel required></ion-input>
+				</div>
+				<div class="formRow button">
+					<button type="reset" ion-button color="danger" full (click)="resetForm(loginForm)">Reset</button>
+          <button type="submit" ion-button color="primary" class="submit-btn" full [disabled]="!loginForm.valid">Submit</button>
+        </div>
+			</form>
+		</div>
+	</div>
+</ion-content>

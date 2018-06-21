@@ -1,0 +1,56 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title [hidden]="searchBar">{{navParams.data.menuLabel}}</ion-title>
+    <ion-searchbar [hidden]="!searchBar" (ionInput)="getItems($event)" (ionClear)="onSearchClear($event)"
+        [animated]=true [autocomplete]="on" placeholder="Search Facility"
+        [debounce]=1500 [(ngModel)]="searchBarText" #mySearchBar></ion-searchbar>
+    <ion-buttons end>
+      <button ion-button (click)="toggleSearchBar();isSearchCleared=true" *ngIf="cards.length>1 || isSearchCleared" >
+        <ion-icon name="search" class="searchIcon"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentFilterModal()" *ngIf="calendarIcon">
+     <ion-icon name="md-calendar"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-slides pager=false #slides (ionSlideNextStart)="next()" (ionSlidePrevStart)="prev()" >
+    <ion-slide *ngFor="let card of cards">
+      <ion-grid color="positive" class="nextPrivTab">
+        <ion-row>
+          <ion-col>
+            <ion-icon  *ngIf="cards.length>1" [hidden]="slide.isBeginning()" (click)="slide.slidePrev(0,true)" name="arrow-round-back"></ion-icon>
+          </ion-col>
+          <ion-col col-auto *ngIf="card">
+            {{card.facilityName }}
+          </ion-col>
+          <ion-col>
+            <ion-icon *ngIf="cards.length>1" [hidden]="slide.isEnd()" (click)="slide.slideNext(0,true)" name="arrow-round-forward"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row class="customColorCards" *ngIf="card">
+          <ion-col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 *ngFor="let report of card.reports">
+            <analytics-card [report]="report" >
+            </analytics-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+  </ion-slides>
+
+  <!-- added float action buttons for filter -->
+  <!-- <ion-fab bottom right *ngIf="floatingIcon">
+    <button ion-fab style="background:#407eb4;"><ion-icon name="md-arrow-dropleft"></ion-icon>&nbsp;Go To</button>
+    <ion-fab-list side="left" style="background:#407eb4;">
+      <button ion-fab (click)="openDateRangePicker()" ><ion-icon name="md-calendar" ></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab> -->
+
+</ion-content>

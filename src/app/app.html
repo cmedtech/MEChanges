@@ -1,0 +1,42 @@
+<ion-nav [root]="rootPage" #content>
+
+</ion-nav>
+
+<ion-menu [content]="content" side="right" >
+  <ion-header class="top-side-menu">
+    <ion-toolbar>
+      <ion-title>
+        <ion-item>
+          {{loginInfo.userName}}
+        </ion-item>
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only menuClose><ion-icon name="md-close"></ion-icon></button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-grid class="side-menu">
+      <ion-row *ngFor="let m of menu">
+        <ion-col col-12>
+          <button ion-item (click)="getSubmenu(m)" [hidden]="!m.childMenuItems">{{m.label}}
+              <ion-icon [name]="m.isSelected ? 'ios-arrow-down' : 'ios-arrow-forward'" [hidden]="!m.childMenuItems" class="pull-right"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-grid class="p-0" [hidden]="!m.isSelected">
+          <ion-row *ngFor="let sm of m.childMenuItems">
+            <ion-col col-12>
+              <button class="subMenu" ion-item menuClose (click)="menuRouter(sm)">{{sm.label}}</button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-row>
+      <ion-row class="logoutBtn">
+        <button ion-item (click)="logoutApp()" >Logout</button>
+      </ion-row>
+    </ion-grid>
+    <div class="app-version">
+        {{appName}} {{appVersion}}v
+    </div>
+</ion-content>
+</ion-menu>

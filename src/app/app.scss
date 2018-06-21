@@ -1,0 +1,43 @@
+// http://ionicframework.com/docs/v2/theming/
+.item-md.item-block .item-inner{border-bottom: 0px !important;}
+
+.side-menu .item-inner{border-bottom: 0px !important;}
+.side-menu .item-ios .item-inner {
+    padding-right: 8px !important;
+    background-image: none !important;
+}
+.top-side-menu .item-ios.item-block .item-inner {
+    border-bottom: none;
+}
+.top-side-menu ion-title.title-ios { height: 80px !important;}
+.platform-ios .menu-enabled.show-menu ion-backdrop.show-backdrop {
+    background: #000;
+    display: block;
+    opacity: 0.3;
+    z-index: -1;
+}
+ion-menu .app-version {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #868686;
+}
+.side-menu .p-0{padding: 0;}
+.logoutBtn { margin: -5px 5px 0;}
+.pull-right { float: right;}
+.top-side-menu ion-item { background: #d7181e; color: #fff; padding: 0;}
+.top-side-menu .toolbar-background { background: #d7181e;}
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.

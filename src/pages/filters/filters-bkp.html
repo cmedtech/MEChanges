@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">Close</button>
+    </ion-buttons>
+    <ion-title >Pick Date</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Select Date</ion-label>
+    <ion-datetime displayFormat="MMMM YYYY" min="{{minYear}}" max="{{maxYear}}" pickerFormat="MMMM YYYY" [(ngModel)]="myStartDate" placeholder="click to select"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label style="text-align:center; color:red;">Compare to</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Previous Date</ion-label>
+    <ion-datetime displayFormat="MMMM YYYY" min="{{minYear}}" max="{{maxYear}}" pickerFormat="MMMM YYYY" [(ngModel)]="myEndDate" placeholder="click to select "></ion-datetime>
+  </ion-item>
+  <ion-row center>
+   <ion-col text-center>
+    <button ion-button (click)="DateRangeSubmit()" class="align-right">Submit</button>
+   </ion-col>
+  </ion-row>
+  <!-- <button ion-button (click)="DateRangeSubmit()" small center class="align-right">Submit</button> -->
+</ion-content>

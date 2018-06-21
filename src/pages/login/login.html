@@ -1,0 +1,42 @@
+<ion-content padding>
+
+<ion-grid style="border:thin solid lightgray;border-radius:0px 15px 15px 15px;">
+<form (ngSubmit)="login(loginForm)" #loginForm="ngForm">
+  <ion-row>
+    <ion-col col-2>
+    </ion-col>
+    <ion-col col-8>
+      <ion-item>
+        <ion-label for="username" stacked><ion-icon name="contact"></ion-icon></ion-label>
+        <ion-input type="email" name="Username" placeholder="Enter UserName" ngModel required ></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col col-2>
+    </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col col-2>
+  </ion-col>
+  <ion-col col-8>
+    <ion-item>
+      <ion-label for="password" stacked><ion-icon name="key"></ion-icon></ion-label>
+      <ion-input type="password" name="password" placeholder="Enter Password" ngModel required ></ion-input>
+    </ion-item>
+  </ion-col>
+  <ion-col col-2>
+  </ion-col>
+</ion-row>
+<ion-row align-items-center>
+  <!-- <ion-col col-2></ion-col> -->
+  <ion-col col-12 text-right>
+  <ion-buttons>
+    <button type="submit" ion-button color="primary" [disabled]="!loginForm.valid">Submit</button>
+    <button ion-button color="danger" (click)="resetForm(loginForm)">Reset</button>
+  </ion-buttons>
+</ion-col>
+<!-- <ion-col col-2></ion-col> -->
+</ion-row>
+
+</form>
+</ion-grid>
+</ion-content>
